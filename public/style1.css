@@ -4,9 +4,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 
 }
-body{
-    /* background-color: #000; */
-}
+
 .main{
     display: flex;
 }
@@ -14,15 +12,12 @@ aside{
     position: relative;
     height: 100vh;
     width: 15%;
-    /* background: red; */
 }
-
 .top{
     margin: 20px;
     margin-bottom: 50px;
     height: 5vh;
     width:40px;
-    /* background: red; */
 }
 .top img{
     height: 50px;
@@ -60,14 +55,11 @@ aside{
     flex-direction: column;
     position: absolute;
     left: 30px;
-    line-height: 20px;
     font-weight: 400;
 }
 .one{
     display: flex;
     padding-top: 10px;
-    /* justify-content: center; */
-    /* align-items: center; */
     height: 40px;
     width: 100%;
     cursor: pointer;
@@ -78,15 +70,12 @@ aside{
     background-color: rgb(245, 245, 245);
 }
 .line{
-
     height: 100vh;
     width: 2px;
     border-left: 2px solid rgb(211,211,211);
 }
 header{
     display: flex;
-    /* flex-direction: column; */
-    /* background-color: red;+ */
     height: 20vh;
     width: 60vw;
     margin-left: 15vw;
@@ -101,15 +90,11 @@ header{
     margin-left: 5vw;
     display: flex;
     gap: 20px;
-
 }
 .right{
     display: flex;
     flex-direction: column;
     gap: 20px;
-}
-#follow{
-    height: 30px;
 }
 .mssg{
     height: 30px;
@@ -123,13 +108,11 @@ header{
     display: flex;
     gap: 40px;
     margin-left: 70px;
-
 }
 .vani{
     font-weight: 600;
 }
 .all{
-    /* background-color: red; */
     width: 300px;
     font-size: 14px;
   margin-left: 70px;   
@@ -161,9 +144,5 @@ middle{
     margin-left: 480px;
 }
 .posts1{
-    
     margin-left: 200px;
-}
-.posts1 img{
-    width: 800px;
 }
