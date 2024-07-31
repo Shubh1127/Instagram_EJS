@@ -29,3 +29,6 @@ app.post("/profile",(req,res)=>{
     console.log(username,password);
     res.render("profile.ejs")
 })
+app.get("/home",(req,res)=>{
+    res.render("home.ejs")
+})
