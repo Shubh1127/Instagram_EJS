@@ -79,15 +79,14 @@
                         <Span class="stn"><i class="fa-solid fa-gear stn1"></i></Span>
                     </div>
                     <div class="det">
-                        <p></p>
-                        <p><%=user.followers%></p>
-                        <p><%=user.following%></p>
+                        <p><%=user.posts%> posts</p>
+                        <p><%=user.followers%> followers</p>
+                        <p><%=user.following%> following</p>
                     </div>
                     <div class="all">
-                        <p class="vani"><%=username%></p>
-                        <p> Hey there<br></p>
+                        <p class="vani"><%=user.username%></p>
                             <br>
-                        <span class="followed">Followed by</span> <span class="ys">Dhoni,Sachin</span><span class="followed"> +3 more</span>
+                        <span class="followed">Followed by</span> <span class="ys"><%=user.followed_by%></span><span class="followed"> +3 more</span>
                     </div>
                 </div>
             </header>

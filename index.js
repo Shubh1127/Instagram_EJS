@@ -10,28 +10,28 @@ app.listen(port,()=>{
 })
 let users=[
     {
-        username:"shubhamm__1223",
+        username:"shubhamm_1223",
         bio:"shubham",
         followers:50,
         following:90,
-        Posts:0,
-        Followed_by:"harsh,yash"
+        posts:0,
+        followed_by:"harsh,yash"
     },
     {
         username:"dushyant_vashisht",
         bio:"Dushyant",
         followers:80,
         following:110,
-        Posts:0,
-        Followed_by:"harsh,shubham"
+        posts:0,
+        followed_by:"harsh,shubham"
     },
     {
         username:"harsh_9560",
         bio:"harsh",
         followers:10,
         following:30,
-        Posts:0,
-        Followed_by:"shubham,dushyant"
+        posts:0,
+        followed_by:"shubham,dushyant"
     }
 ]
 
