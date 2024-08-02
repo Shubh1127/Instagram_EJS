@@ -73,21 +73,18 @@
                 </div>
                 <div class=" right">
                     <div class="name">
-                        <p>Virat Kohli</p>
-                        <select id="folow" class="mssg">
-                            <option value="Following">Following</option>
-                        </select>
-                        <button class="mssg">Message</button>
-                        <button class="mssg space"><img src="images/acc.png" class="acc"></button>
-                        <i class="fa-solid fa-ellipsis dot"></i>
+                        <p><%=user.username%></p>
+                        <button class="mssg">Edit profile</button>
+                        <button class="mssg">view archive</button>
+                        <Span class="stn"><i class="fa-solid fa-gear stn1"></i></Span>
                     </div>
                     <div class="det">
-                        <p>1087 Posts</p>
-                        <p>260M followers</p>
-                        <p>452 following</p>
+                        <p></p>
+                        <p><%=user.followers%></p>
+                        <p><%=user.following%></p>
                     </div>
                     <div class="all">
-                        <p class="vani">Virat Kohli</p>
+                        <p class="vani"><%=username%></p>
                         <p> Hey there<br></p>
                             <br>
                         <span class="followed">Followed by</span> <span class="ys">Dhoni,Sachin</span><span class="followed"> +3 more</span>
