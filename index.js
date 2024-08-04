@@ -1,9 +1,16 @@
-const exp = require("constants");
+
+const session = require("express-session");
 const express=require("express");
 const app=express();
 const path=require("path");
 
 let port=8080;
+
+app.use(session({
+    secret: 'your_secret_key',
+    resave: false,
+    saveUninitialized: true,
+}));
 
 app.listen(port,()=>{
     console.log(`port is listening ${port}`);
@@ -49,22 +56,46 @@ app.get("/",(req,res)=>{
     res.render("index.ejs")
 })
 
-app.post("/profile",(req,res)=>{
-    let {username,password}=req.body;
-    console.log(username)
-    
-    let user=users.find((u)=>username===u.username);
-    if(user){
-        let newContent=req.body.content;
-        if(newContent){
-            user.content=newContent;
+app.get("/profile",(req,res)=>{
+    if (req.session.username) {
+        let username = req.session.username.trim().toLowerCase();
+        let user = users.find(u => username === u.username.toLowerCase().trim());
+        if (user) {
+            res.render("profile.ejs", { user });
+        } else {
+            res.status(404).send("User not found");
         }
-        res.render("profile.ejs",{user});
+    } else {
+        res.redirect("/");
     }
-    else{
-        res.status(404).send("user not found")
+})
+app.post("/home",(req,res)=>{
+    try{
+    let { username, password } = req.body;
+    username = username.trim().toLowerCase();
+    console.log("Received username:", username);
+
+    let user = users.find(u => username === u.username.toLowerCase().trim());
+    console.log("Found user:", user);
+
+    if (user) {
+        req.session.username = user.username;
+    } else {
+        res.status(404).send("User not found");
+    }
+    res.render("home.ejs")
+    }
+    catch{
+        res.send("user not found")
     }
 })
 app.get("/home",(req,res)=>{
     res.render("home.ejs")
+})
+
+app.post("/search",(req,res)=>{
+    res.render("search.ejs");
+})
+app.get("/search",(req,res)=>{
+    res.render("search.ejs");
 })
