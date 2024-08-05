@@ -7,6 +7,11 @@ a{
     text-decoration: none;
     color: #000;
 }
+.search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .main{
     display: flex;
 }
